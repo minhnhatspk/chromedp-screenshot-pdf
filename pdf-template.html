@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <style>
+    #main {
+      border: 1px solid black;
+      padding: 20px;
+      height: 1056px;
+      width: 856px;
+    }
+
+    .hospital_name {
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .hospital_name,
+    .hospital_address,
+    .hospital_phone {
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .kind {
+      font-size: 23px;
+    }
+
+    .hospital_address,
+    .hospital_phone {
+      font-weight: 500;
+    }
+
+    .prescription_date {
+      text-align: right;
+      font-size: 13px;
+    }
+
+    .doctor_name,
+    .drug_name {
+      padding-left: 30px;
+    }
+
+    .drug_info {
+      float: left;
+      margin-left: 350px;
+    }
+
+    .drug_info>.drug_days,
+    .drug_ref {
+      font-style: italic;
+      font-weight: 400;
+    }
+
+    .drug_ref {
+      margin-left: 10px;
+    }
+
+    .drug_pricing {
+      clear: both;
+    }
+
+    .drug_pricing>.price {
+      padding-top: 0;
+    }
+
+    .patient_pay .box {
+      border: 2px solid black;
+      padding: 2px 4px;
+    }
+
+    .pharmacist_signature {
+      display: flex;
+      position: relative;
+    }
+
+    .pharmacist_signature>h3 {
+      margin-bottom: 0;
+    }
+
+    .pharmacist_signature>.line {
+      border-bottom: 3px solid black;
+      flex: 1;
+      margin-left: 3px;
+    }
+
+    .pharmacist_signature .signature {
+      width: 100px;
+      height: 40px;
+      position: absolute;
+      top: -10px;
+      right: 40%
+    }
+  </style>
+</head>
+
+<body>
+  <div id="main">
+    <h1 class="hospital_name">{{ .Hospital.Name }}</h1>
+    <h3 class="hospital_address">{{ .Hospital.Address }}</h3>
+    <h3 class="hospital_phone">{{ .Hospital.Phone }}</h3>
+    <p class="kind">OFFICAL PRESCRIPTION RECEIPT</p>
+    <p class="prescription_date"><b>{{ .Prescription.Date }}</b></p>
+    <div>Rx: {{ .Prescription.OrderNom }}</div>
+    <p class="patient_name"><b>{{ .Patient.Name }}</b></p>
+    <p class="patient_address">{{ .Patient.Address }}</p>
+    <p class="patient_city">{{ .Patient.City }}</p>
+    <p class="patient_phone">{{ .Patient.Phone }}</p>
+    <p class="doctor_name">Dr: {{ .Doctor.Name }}</p>
+    <p class="drug_name">{{ .Drug.Name }}</p>
+    <div class="drug_info">
+      <b class="drug_days">Days: {{ .Drug.Days }}</b>
+      <b class="drug_ref">Ref: {{ .Drug.Refill }}</b>
+    </div>
+    <div class="drug_pricing">
+      <h3>Pricing GS/CA</h3>
+      <p class="price">${{ .Drug.Price }}</p>
+    </div>
+
+    <div class="patient_pay">
+      <h3>Patient pays: <b class="box">${{ .Pay }}</b></h3>
+    </div>
+
+    <div class="pharmacist_signature">
+      <h3>Pharmacist's Signature</h3>
+      <div class="line"></div>
+      <img src="{{ .PharmacistSignature }}" alt="" class="signature">
+    </div>
+  </div>
+</body>
+
+</html>

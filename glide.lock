@@ -1,0 +1,77 @@
+hash: fea02a09d480b47f0197300098cc4ba6e4699f1a93801927179a4004a9084f63
+updated: 2019-07-21T20:00:17.398484+07:00
+imports:
+- name: github.com/chromedp/cdproto
+  version: 764a6f24cacb016c4ee990516bda169075b8c3d5
+  subpackages:
+  - accessibility
+  - animation
+  - applicationcache
+  - audits
+  - backgroundservice
+  - browser
+  - cachestorage
+  - cast
+  - cdp
+  - css
+  - database
+  - debugger
+  - deviceorientation
+  - dom
+  - domdebugger
+  - domsnapshot
+  - domstorage
+  - emulation
+  - fetch
+  - headlessexperimental
+  - heapprofiler
+  - indexeddb
+  - input
+  - inspector
+  - io
+  - layertree
+  - log
+  - memory
+  - network
+  - overlay
+  - page
+  - performance
+  - profiler
+  - runtime
+  - security
+  - serviceworker
+  - storage
+  - systeminfo
+  - target
+  - tethering
+  - tracing
+  - webaudio
+- name: github.com/chromedp/chromedp
+  version: bd26d4c96e74bb4281f668998feed3d13df05832
+  subpackages:
+  - kb
+- name: github.com/gobwas/httphead
+  version: 2c6c146eadee0b69f856f87e3e9f1d0cd6aad2f5
+- name: github.com/gobwas/pool
+  version: cd2fb0a117357da7830c32f332c8520db8e2827d
+  subpackages:
+  - internal/pmath
+  - pbufio
+  - pbytes
+- name: github.com/gobwas/ws
+  version: 05baaea2bbcfe8963301c62d9931c882d59595cd
+  subpackages:
+  - wsutil
+- name: github.com/knq/sysutil
+  version: f05b59f0f3075ba1bc5701ef0df4393a05ebd0e7
+- name: github.com/mailru/easyjson
+  version: b2ccc519800e761ac8000b95e5d57c80a897ff9e
+  subpackages:
+  - buffer
+  - jlexer
+  - jwriter
+- name: golang.org/x/sys
+  version: ecd444e8653b66b20d764e53c22e3e615eea5fae
+  subpackages:
+  - unix
+testImports: []

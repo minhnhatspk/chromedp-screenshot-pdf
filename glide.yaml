@@ -1,0 +1,4 @@
+package: github.com/minhnhatspk/chromedp-screenshot-pdf
+import:
+- package: github.com/chromedp/chromedp
+  version: ~0.3.1
